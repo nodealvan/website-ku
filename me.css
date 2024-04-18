@@ -543,3 +543,6 @@ textarea {
     width: 12;
     animation: typing 3s steps(25, end), blink-caret 0.50s step-end infinite;
 }
+.alamat{
+  font-size: 10;
+}
