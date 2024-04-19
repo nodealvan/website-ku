@@ -1,0 +1,16 @@
+.writer {
+    overflow: hidden; /* Memastikan teks tidak muncul saat animasi dimulai */
+    border-right: .15em solid black; /* Garis pemisah simulasi mengetik */
+    white-space: nowrap; /* Mencegah pemisahan kata */
+    margin: auto; /* Pusatkan teks */
+    font-family: 'Poppins', sans-serif; /* Font family */
+    font-size: 2em; /* Ukuran font */
+    text-transform: uppercase; /* Huruf besar */
+    animation: typing 5s steps(40) infinite; /* Waktu animasi dan jumlah langkah (karakter) */
+  }
+
+  /* Keyframes untuk animasi pengetikan */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
