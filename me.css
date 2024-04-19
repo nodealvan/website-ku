@@ -76,18 +76,6 @@ h2 {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /*=============== MENU ===============*/
@@ -142,9 +130,9 @@ h2 {
 }
 
 .header-img {
-  width: 170px;
-  height: 170px;
-  border-radius: 100%;
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
   margin: 10px;
   margin-top: 100px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
@@ -261,11 +249,11 @@ h2 {
 }
 
 .english {
-  width: 30%;
+  width: 75%;
 }
 
 .french {
-  width: 30%;
+  width: 50%;
 }
 
 .skill {
@@ -527,7 +515,6 @@ textarea {
     line-height: 2.5rem;
   }
 }
-
 #navbar {
   position: fixed;
   margin: 0;
@@ -536,29 +523,3 @@ textarea {
   height: 0;
 }
 }
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100px }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(20, 216, 223) }
-}
-
-.saya {
-    display: inline-block;
-    border-right: 2px solid rgb(11, 216, 213); /* Ganti warna dan lebar garis sesuai kebutuhan */
-    white-space: nowrap;
-    overflow: hidden;
-    width: 12;
-    animation: typing 3s steps(25, end), blink-caret 0.50s step-end infinite;
-}
-.alamat{
-  font-size: 10;
-  align-items: center;
-  text-align: center;
-}
-
-

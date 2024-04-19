@@ -51,9 +51,5 @@ window.addEventListener('scroll', function() {
 });
 
 // Code for fade-in/fade-out text in About page
-document.addEventListener('DOMContentLoaded', function() {
-  const fadeText = document.querySelector('.fade-in-out-text');
-  if (fadeText) {
-      fadeText.style.display = 'block';
-  }
-});
+
+  
