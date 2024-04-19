@@ -50,21 +50,4 @@ window.addEventListener('scroll', function() {
   });
 });
 
-
-
-window.onload = function() {
-    var element = document.querySelector('.typing-effect');
-    var text = element.innerText;
-    element.innerHTML = ''; // Menghapus teks asli
-
-    // Membuat elemen span untuk setiap karakter dalam teks
-    text.split('').forEach(function(char, index) {
-        var charSpan = document.createElement('span');
-        charSpan.textContent = char;
-        charSpan.style.animationDelay = index * 0.1 + 's'; // Mengatur animasi delay
-        element.appendChild(charSpan);
-    });
-};
-// Code for fade-in/fade-out text in About page
-
   
