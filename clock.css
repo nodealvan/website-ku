@@ -1,0 +1,6 @@
+
+#clock {
+    font-size: 2em;
+    padding-top: 12px;
+    animation: color-change 5s infinite alternate; /* Gunakan animasi color-change */
+}
