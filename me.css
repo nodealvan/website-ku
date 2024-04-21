@@ -608,3 +608,21 @@ textarea {
     border-color: black; /* Kursor muncul di tengah */
   }
 }
+
+
+
+/* animasi waktu jam */
+@keyframes colorChange {
+  0% { background-color: red; }  /* Warna awal */
+  25% { background-color: blue; } /* Warna setelah 1/4 waktu */
+  50% { background-color: green; } /* Warna setengah jalan */
+  75% { background-color: yellow; } /* Warna setelah 3/4 waktu */
+  100% { background-color: red; } /* Warna kembali ke awal */
+}
+
+/* Terapkan animasi pada elemen clock */
+.clock {
+  width: 100px;  /* Lebar kotak */
+  height: 100px;  /* Tinggi kotak */
+  animation: colorChange 4s infinite;  /* Animasi dengan durasi 4 detik, diulang terus-menerus */
+}
