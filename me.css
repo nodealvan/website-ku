@@ -577,52 +577,51 @@ textarea {
 
 @keyframes typing {
   from {
-    width: 0; /* Awalnya, lebar teks adalah 0 */
+    width: 0;
+    /* Awalnya, lebar teks adalah 0 */
   }
+
   to {
-    width: 100%; /* Lebar teks bertambah secara bertahap */
+    width: 100%;
+    /* Lebar teks bertambah secara bertahap */
   }
 }
 
 /* Gaya untuk teks yang muncul seperti mengetik */
 #title {
-  text-align: center; /* Pusatkan teks */
-  white-space: nowrap; /* Hindari pembungkusan teks */
-  overflow: hidden; /* Sembunyikan bagian teks yang belum muncul */
+  text-align: center;
+  /* Pusatkan teks */
+  white-space: nowrap;
+  /* Hindari pembungkusan teks */
+  overflow: hidden;
+  /* Sembunyikan bagian teks yang belum muncul */
 }
 
 #title span {
-  display: inline-block; /* Memungkinkan pengaturan lebar */
-  font-size: 30px; /* Ukuran font */
-  border-right: 2px solid black; /* Efek kursor berkedip */
-  animation: typing 5s steps(100, end), blink-caret 0.75s step-end infinite; /* Animasi mengetik dan berkedip */
+  display: inline-block;
+  /* Memungkinkan pengaturan lebar */
+  font-size: 30px;
+  /* Ukuran font */
+  border-right: 2px solid black;
+  /* Efek kursor berkedip */
+  animation: typing 5s steps(100, end), blink-caret 0.75s step-end infinite;
+  /* Animasi mengetik dan berkedip */
 }
 
 /* Animasi berkedip untuk kursor */
 @keyframes blink-caret {
-  from, to {
+
+  from,
+  to {
     height: 0px;
-    border-color: transparent; /* Kursor menghilang di awal dan akhir */
+    border-color: transparent;
+    /* Kursor menghilang di awal dan akhir */
   }
+
   50% {
-    border-color: black; /* Kursor muncul di tengah */
+    border-color: black;
+    /* Kursor muncul di tengah */
   }
 }
 
 
-
-/* animasi waktu jam */
-@keyframes colorChange {
-  0% { background-color: red; }  /* Warna awal */
-  25% { background-color: blue; } /* Warna setelah 1/4 waktu */
-  50% { background-color: green; } /* Warna setengah jalan */
-  75% { background-color: yellow; } /* Warna setelah 3/4 waktu */
-  100% { background-color: red; } /* Warna kembali ke awal */
-}
-
-/* Terapkan animasi pada elemen clock */
-.clock {
-  width: 100px;  /* Lebar kotak */
-  height: 100px;  /* Tinggi kotak */
-  animation: colorChange 4s infinite;  /* Animasi dengan durasi 4 detik, diulang terus-menerus */
-}
