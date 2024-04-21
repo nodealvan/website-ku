@@ -9,7 +9,7 @@
   --background-color: #302729;
   --background-color-2: #362b2e;
   --light-grey: rgb(194, 194, 194);
-  --border-radius: 30px;
+  --border-radius: 15px;
 }
 
 /*=============== SCROLLBAR ===============*/
@@ -29,6 +29,7 @@
 
 .content:hover::-webkit-scrollbar-thumb {
   background: var(--light-grey);
+  animation: fadeIn 4s ease-in-out;
 }
 
 /*=============== BASE ===============*/
@@ -40,26 +41,31 @@
 }
 
 html {
+
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   background-color: var(--background-color);
 }
 
 a {
+  animation: fadeIn 5s ease-in-out;
   text-decoration: none;
   color: var(--accent-color);
 }
 
 p {
+  animation: fadeIn 5s ease-in-out;
   line-height: 1.5rem;
   margin-bottom: 0.7rem;
 }
 
 h1 {
+  animation: fadeIn 3s ease-in-out;
   line-height: 4rem;
 }
 
 h2 {
+  animation: fadeIn 4s ease-in-out;
   line-height: 2rem;
   font-weight: normal;
 }
@@ -71,12 +77,26 @@ h2 {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
+  scroll-behavior: smooth;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
+
+.menu-icon {
+  transition: transform 0.3s;
+}
+
+.menu-icon:hover {
+  transform: scale(1.0);
+}
+
 
 /*=============== MENU ===============*/
 
@@ -107,6 +127,7 @@ h2 {
 /*=============== PORTFOLIO CONTAINER ===============*/
 
 .portfolio {
+  animation: fadeIn 5s ease-in-out;
   display: flex;
   background: var(--background-color-2);
   height: 80vh;
@@ -122,7 +143,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
+  width: 550px;
   height: 100%;
   border-radius: var(--border-radius);
   color: white;
@@ -249,11 +270,11 @@ h2 {
 }
 
 .english {
-  width: 75%;
+  width: 45%;
 }
 
 .french {
-  width: 50%;
+  width: 30%;
 }
 
 .skill {
@@ -442,25 +463,31 @@ textarea {
   html {
     scroll-behavior: smooth;
   }
+
   .container {
     height: auto;
     flex-direction: column;
   }
+
   .portfolio {
     flex-direction: column;
     height: 100%;
     margin: 30px 0 100px;
   }
+
   .content {
     padding-bottom: 100px;
   }
+
   .header {
     width: 100%;
     height: 100%;
   }
+
   .content-card {
     padding: 100px 0 0;
   }
+
   .menu {
     flex-direction: row;
     position: fixed;
@@ -471,10 +498,12 @@ textarea {
     border-radius: 50px;
     margin: 0;
   }
+
   .menu-icon {
     font-size: 2rem;
     margin: 0 15px;
   }
+
   .home h1 {
     font-size: 3rem;
   }
@@ -506,26 +535,76 @@ textarea {
     display: none;
   }
 
-@media screen and (max-width: 400px) {
-  .content-card {
-    margin: 0 30px;
+  @media screen and (max-width: 400px) {
+    .content-card {
+      margin: 0 30px;
+    }
+
+    .home h1 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
   }
-  .home h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+
+  #navbar {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
   }
-}
-#navbar {
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  width: 0;
-  height: 0;
-}
 }
 
 
-.alamat{
+.alamat {
   text-align: center;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  animation: fadeIn 4s ease-in-out;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0; /* Awalnya, lebar teks adalah 0 */
+  }
+  to {
+    width: 100%; /* Lebar teks bertambah secara bertahap */
+  }
+}
+
+/* Gaya untuk teks yang muncul seperti mengetik */
+#title {
+  text-align: center; /* Pusatkan teks */
+  white-space: nowrap; /* Hindari pembungkusan teks */
+  overflow: hidden; /* Sembunyikan bagian teks yang belum muncul */
+}
+
+#title span {
+  display: inline-block; /* Memungkinkan pengaturan lebar */
+  font-size: 30px; /* Ukuran font */
+  border-right: 2px solid black; /* Efek kursor berkedip */
+  animation: typing 5s steps(100, end), blink-caret 0.75s step-end infinite; /* Animasi mengetik dan berkedip */
+}
+
+/* Animasi berkedip untuk kursor */
+@keyframes blink-caret {
+  from, to {
+    height: 0px;
+    border-color: transparent; /* Kursor menghilang di awal dan akhir */
+  }
+  50% {
+    border-color: black; /* Kursor muncul di tengah */
+  }
+}

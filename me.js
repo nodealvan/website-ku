@@ -33,6 +33,10 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Contoh animasi sederhana menggunakan GSAP
+gsap.from(".header-img", { opacity: 0, duration: 1 });
+gsap.from(".portfolio h1", { x: -200, duration: 1 });
+
 // Code for parallax effect
 window.addEventListener('scroll', function() {
   let scrollTop = window.scrollY;
